@@ -26,7 +26,7 @@ int main()
     int i = 0, j = strlen(user_string) -2;  // includes the enter press
     // printf("%d", j);     
     
-    int palindrome = 1; 
+    int palindrome = 1; // true 
     if((j+1)%2 != 0){ 
         while(i != j)
         {
