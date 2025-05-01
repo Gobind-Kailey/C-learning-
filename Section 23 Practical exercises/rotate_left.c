@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+// The given array should be shifted to the left. 
+
+// Ex: 5,4,7,3 -- > 4,7,3,5
+#define SIZE 4
+#define N 5 
+
+int main(){
+
+    int i, j, k; 
+    int lst[SIZE] = {5,4,7,3};
+    for (k =1; k <= N; k++){
+        int temp = lst[0];
+
+        for (i = 0; i < SIZE; i++){
+            if (i + 1 == SIZE){
+                lst[i] = temp;
+            }
+            else{
+                lst[i] = lst[i+1];
+            }
+        }
+    }
+    for (j = 0; j < SIZE; j++){
+        printf("new list numbers = %d\n", lst[j]);
+    }
+    return 0;
+
+}
