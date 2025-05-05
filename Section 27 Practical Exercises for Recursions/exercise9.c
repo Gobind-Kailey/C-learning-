@@ -14,6 +14,12 @@ Need to look at the string in reverse as all the index values are flipped.
 
 Then compare the index and value to check if even or not. 
 
+
+Special things to note: 
+
+- If you have an even number of digits, then you will never reach a case where n < 10, which is why you should do n < 100   
+
+
 */
 // Assuming number inputted has atleast 1 digit 
 int len(int user_input, int counter)
@@ -29,8 +35,9 @@ int len(int user_input, int counter)
 
 int correct_position(int user_input, int i, int length)
 {
-    if(i == (len(length, 0))) return 1;  
     if((user_input%10) %2 != i%2) return 0 + correct_position(user_input/10, i--, length);
+    if(i == (len(length, 0))) return 1;  
+
     // if(user_input %2 == i%2) return 1;
     return correct_position(user_input/10, i++, length);
 
