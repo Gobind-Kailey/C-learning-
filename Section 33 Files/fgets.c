@@ -2,9 +2,9 @@
 
 /*
 
-fgets()
+fgets() -Gets the string from the file or whatever is specified as the last parameter and outputs it to the terminal 
 
-gets() -Gets the string from the use 
+gets() -Gets the string from the user 
 
 
 
